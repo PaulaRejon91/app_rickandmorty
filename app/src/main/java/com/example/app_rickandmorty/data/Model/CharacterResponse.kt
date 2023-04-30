@@ -1,6 +1,6 @@
 package com.example.app_rickandmorty.data.Model
 
-data class GetCharacterByIdResponse(
+data class CharacterResponse(
     val created: String = "",
     val episode: List<String> = listOf(),
     val gender: String = "",

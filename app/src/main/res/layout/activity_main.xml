@@ -1,122 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
-
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/headerImageView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintDimensionRatio="16:9"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/ram"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tvName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textColor="?attr/colorOnBackground"
-        android:textSize="28dp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/genderImageView"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/headerImageView"
-        tools:text="Morty Smith" />
+    tools:context=".ui.view.MainActivity">
 
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/genderImageView"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tvName"
-        tools:srcCompat="@drawable/baseline_stars_24" />
-
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="?colorPrimary"
-        app:layout_constraintTop_toBottomOf="@+id/aliveTextView"
-        app:layout_constraintStart_toStartOf="@id/aliveTextView"
-        app:layout_constraintEnd_toEndOf="@id/genderImageView"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/originLabelTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Origin"
-        android:layout_marginTop="32dp"
-        android:textColor="?attr/colorOnBackground"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@id/aliveTextView"
-        app:layout_constraintTop_toBottomOf="@id/aliveTextView"
-        android:textStyle="italic"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/originTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Earth"
-        android:textColor="?attr/colorOnBackground"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/originLabelTextView"
-        app:layout_constraintTop_toBottomOf="@id/originLabelTextView" />
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvRickAndMorty"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"/>
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/specieslabelTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Species"
-        android:layout_marginTop="32dp"
-        android:textColor="?attr/colorOnBackground"
-        android:textSize="28sp"
-        app:layout_constraintStart_toStartOf="@id/originTextView"
-        app:layout_constraintTop_toBottomOf="@id/originTextView"
-        android:textStyle="italic"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/speciesTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Humano"
-        android:textColor="?attr/colorOnBackground"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/specieslabelTextView"
-        app:layout_constraintTop_toBottomOf="@id/specieslabelTextView" />
-
-<!--    <androidx.appcompat.widget.AppCompatTextView-->
-<!--        android:id="@+id/aliveLabelTextView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="Alive"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:textColor="?attr/colorOnBackground"-->
-<!--        android:textSize="28sp"-->
-<!--        app:layout_constraintStart_toStartOf="@id/speciesTextView"-->
-<!--        app:layout_constraintTop_toBottomOf="@id/speciesTextView"-->
-<!--        android:textStyle="italic"/>-->
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/aliveTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:text="Alive"
-        android:textColor="?attr/colorOnBackground"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="@id/tvName"
-        app:layout_constraintTop_toBottomOf="@id/tvName" />
-
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
